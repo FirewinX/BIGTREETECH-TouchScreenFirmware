@@ -360,7 +360,7 @@
 //          6: MAGENTA,    7: YELLOW,      8: ORANGE,  9: PURPLE,   10: LIME,  11: BROWN,
 //         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
 //
-#define MESH_MIN_COLOR 7
+#define MESH_MIN_COLOR 4
 #define MESH_MAX_COLOR 2
 
 // Enable keyboard drawn on left side
