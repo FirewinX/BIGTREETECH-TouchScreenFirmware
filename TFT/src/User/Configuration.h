@@ -63,7 +63,7 @@
  *         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
  */
 #define MARLIN_BKCOLOR 1
-#define MARLIN_FNCOLOR 0
+#define MARLIN_FNCOLOR 9
 
 /**
  * Text displayed at the top of the TFT in Marlin Mode.
