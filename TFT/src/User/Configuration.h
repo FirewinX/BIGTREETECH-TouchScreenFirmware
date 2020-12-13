@@ -335,15 +335,15 @@
 /**
  * Probe Offset
  */
-#define PROBE_OFFSET_MIN_VALUE     -20.0f
-#define PROBE_OFFSET_MAX_VALUE      20.0f
+#define PROBE_OFFSET_MIN_VALUE     -2.0f
+#define PROBE_OFFSET_MAX_VALUE      2.0f
 #define PROBE_OFFSET_DEFAULT_VALUE   0.0f
 
 /**
  * Home Offset
  */
-#define HOME_Z_OFFSET_MIN_VALUE     -20.0f
-#define HOME_Z_OFFSET_MAX_VALUE      20.0f
+#define HOME_Z_OFFSET_MIN_VALUE     -2.0f
+#define HOME_Z_OFFSET_MAX_VALUE      2.0f
 #define HOME_Z_OFFSET_DEFAULT_VALUE   0.0f
 
 /**
