@@ -1,7 +1,7 @@
 #include "MBL.h"
 #include "includes.h"
 
-#define PROBE_HEIGHT_INITIAL_HEIGHT 1.0f                   // 1.0 mm
+#define PROBE_HEIGHT_INITIAL_HEIGHT 0.2f                   // 0.2 mm
 
 static u8 curUnit_index = 0;
 
@@ -13,11 +13,15 @@ void mblUpdateStatus(bool succeeded)
 {
   mblRunning = false;
 
+  probeHeightStop();                                       // raise nozzle
+
+  probeHeightDisable();                                    // restore original software endstops state
+
   if (succeeded)                                           // if bed leveling process successfully terminated, allow to save to EEPROM
   {
     BUZZER_PLAY(sound_success);
 
-    labelChar(tempMsg, LABEL_BL_COMPLETE);
+    LABELCHAR(tempMsg, LABEL_BL_COMPLETE);
 
     if (infoMachineSettings.EEPROM == 1)
     {
@@ -42,7 +46,7 @@ void mblUpdateStatus(bool succeeded)
 /* Show an error notification */
 void mblNotifyError(void)
 {
-  labelChar(tempMsg, LABEL_MBL);
+  LABELCHAR(tempMsg, LABEL_MBL);
 
   sprintf(&tempMsg[strlen(tempMsg)], " %s", textSelect(LABEL_OFF));
 
