@@ -26,7 +26,7 @@
  *
  * Options: [2400: 0, 9600: 1, 19200: 2, 38400: 3, 57600: 4, 115200: 5, 250000: 6, 500000: 7, 1000000: 8]
  */
-#define BAUDRATE 6 // Default: 5
+#define BAUDRATE 5 // Default: 5
 
 /**
  * Default Primary Language (for Touch-Mode only)
@@ -377,7 +377,7 @@
  * M300 S<frequency Hz> P<duration MilliSeconds>
  */
 #define BUZZER_FREQUENCY_DURATION_MS     20  // (MilliSeconds) Default: 20
-#define BUZZER_FREQUENCY_HZ           10000  // (Hz) Default: 10000 (20Hz to 60000Hz)
+#define BUZZER_FREQUENCY_HZ            5000  // (Hz) Default: 10000 (20Hz to 60000Hz)
 
 // Buzzer pin state when buzzer is idle or no sound is playing.
 // Option: [HIGH, LOW]
