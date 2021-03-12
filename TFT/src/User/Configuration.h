@@ -1,6 +1,6 @@
 #ifndef _CONFIGURATION_H_
 #define _CONFIGURATION_H_
-#define CONFIG_VERSION 20210217
+#define CONFIG_VERSION 20210310
 
 //===========================================================================
 //============================= General Settings ============================
@@ -169,7 +169,7 @@
 #define SPEED_ID {"Sp.", "Fr."}  // (speed, flow rate)
 
 // Axes names displayed in Parameter Settings menu
-#define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "E",  "E2"}  // (X, Y, Z, E, E2)
+#define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "E0",  "E1"}  // (X, Y, Z, E0, E1)
 
 // Default X & Y speed (mm/min)
 #define SPEED_XY_SLOW   1000
@@ -193,6 +193,14 @@
 #define X_MAX_POS 235
 #define Y_MAX_POS 235
 #define Z_MAX_POS 270
+
+/**
+ * Raised Z height for probing
+ * Z height to raise / drop after homing (G28) before starting to probe a point.
+ *
+ * WARNING: It MUST be negative (e.g. -50mm) for a Delta printer to avoid crashing into the top of the tower.
+ */
+#define PROBING_Z_RAISE 20.0f
 
 // Pause Settings
 #define NOZZLE_PAUSE_RETRACT_LENGTH               15  // (mm)
